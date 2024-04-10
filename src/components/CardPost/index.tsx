@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Avatar } from "../Avatar";
+import style from "./cardPost.module.css";
 
 interface CardPostProps {
   post: {
@@ -20,8 +21,8 @@ interface CardPostProps {
 
 export function CardPost({ post }: CardPostProps) {
   return (
-    <article>
-      <header>
+    <article className={style.card}>
+      <header className={style.header}>
         <figure>
           <Image
             src={post.cover}
@@ -32,12 +33,12 @@ export function CardPost({ post }: CardPostProps) {
         </figure>
       </header>
 
-      <section>
+      <section className={style.body}>
         <h2>{post.title}</h2>
         <p>{post.body}</p>
       </section>
 
-      <footer>
+      <footer className={style.footer}>
         <Avatar imageURL={post.author.avatar} name={post.author.username} />
       </footer>
     </article>

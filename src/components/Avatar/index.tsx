@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import styles from "./avatar.module.css";
 interface AvatarProps {
   name: string;
   imageURL: string;
@@ -7,7 +7,7 @@ interface AvatarProps {
 
 export function Avatar({ name, imageURL }: AvatarProps) {
   return (
-    <ul>
+    <ul className={styles.avatar}>
       <li>
         <Image
           src={imageURL}
