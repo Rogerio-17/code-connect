@@ -1,4 +1,5 @@
 import { CardPost } from "@/components/CardPost";
+import logger from "@/logger";
 
 interface Post {
   id: number;
@@ -18,9 +19,11 @@ interface Post {
 async function getAllPosts() {
   const response = await fetch("http://localhost:3042/posts");
   if (!response.ok) {
-    console.log("Erro ao buscar dados dos posts");
+    logger.error("Erro ao buscar dados dos posts ):");
+    return [];
   }
 
+  logger.info("Posts obtidos com sucesso!");
   return response.json();
 }
 
