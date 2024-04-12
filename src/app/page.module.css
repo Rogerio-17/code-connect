@@ -1,0 +1,20 @@
+.ContentCard {
+  display: grid;
+  grid-template-areas: "card card";
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.Footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.Footer a {
+  text-decoration-line: none;
+  margin-bottom: 1rem;
+  color: #fff;
+}
