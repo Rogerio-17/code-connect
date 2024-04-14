@@ -17,4 +17,9 @@
   text-decoration-line: none;
   margin-bottom: 1rem;
   color: #fff;
+  hover: red;
+}
+
+.Footer a:hover {
+  color: #cccccc;
 }
