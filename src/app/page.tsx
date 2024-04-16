@@ -31,6 +31,12 @@ async function getAllPosts(page: string) {
   return response.json();
 }
 
+async function searchPost(search: string) {
+  const response = await fetch(
+    `http://localhost:3042/posts?_page=${page}&_per_page=6`
+  );
+}
+
 interface SearchProps {
   searchParams: {
     page: string;
@@ -43,6 +49,10 @@ export default async function Home({ searchParams }: SearchProps) {
 
   return (
     <main>
+      <form className={styles.Form}>
+        <input placeholder="Tiutulo do post" />
+        <button>Buscar publicação</button>
+      </form>
       <div className={styles.ContentCard}>
         {posts.map((post: Post) => (
           <CardPost key={post.id} post={post} />

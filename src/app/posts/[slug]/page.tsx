@@ -1,4 +1,6 @@
+import { CardPost } from "@/components/CardPost";
 import logger from "@/logger";
+import Image from "next/image";
 import { remark } from "remark";
 import html from "remark-html";
 
@@ -39,12 +41,24 @@ export default async function PagePosts({ params }: SearchProps) {
   return (
     <div>
       <h1 style={{ color: "white" }}>{post.title}</h1>
+      <Image src={post.cover} width={765} height={325} alt="Logo do projeto" />
+      <p
+        style={{
+          padding: "0.5rem",
+          width: "50vw",
+          color: "#bcbcbc",
+          marginTop: "2rem",
+        }}
+      >
+        {post.body}
+      </p>
       <div
         style={{
           background: " #171d1f",
           padding: "0.5rem",
           width: "50vw",
           color: "#bcbcbc",
+          marginTop: "2rem",
         }}
         dangerouslySetInnerHTML={{ __html: post.markdown }}
       />

@@ -1,8 +1,36 @@
+.Form input {
+  width: 55vw;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  height: 39px;
+  padding-left: 0.5rem;
+}
+
+.Form button {
+  background-color: #7eff7e; /* Verde limão claro */
+  border: none;
+  color: #000; /* Cor do texto */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px; /* Borda arredondada */
+  cursor: pointer;
+  height: 38px;
+  margin-left: 0.5rem;
+}
+
+.Form button:hover {
+  background-color: #9effa0; /* Verde limão mais escuro no hover */
+}
+
 .ContentCard {
   display: grid;
   grid-template-areas: "card card";
   gap: 1rem;
   padding-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 .Footer {
